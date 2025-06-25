@@ -107,19 +107,9 @@ You can add more by updating the training dataset and retraining the model.
 |------|----------------|
 | **Face Detection** | Replace Haarcascade with **Dlib** or **Mediapipe** for better accuracy |
 | **Features** | Combine **Wavelet + HOG + LBP** for richer features |
-| **Classifier** | Use **GridSearchCV** to optimize SVM hyperparameters |
 | **Preprocessing** | Apply **face alignment** using facial landmarks |
 | **Modeling** | Move to **FaceNet/Dlib embeddings + SVM** (hybrid approach) |
 | **Deep Learning** (optional) | Use pretrained CNN (e.g., **MobileNetV2**, **EfficientNetB0**) for feature extraction |
 
 ---
 
-## 📬 Contact
-
-Feel free to raise issues or open pull requests for improvements.
-
----
-
-## 📜 License
-
-MIT License. You are free to use, modify, and distribute this project.
