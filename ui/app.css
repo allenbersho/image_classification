@@ -1,55 +1,146 @@
-.card-wrapper {
-    margin: 5% 0;
-  }
-  
-/* You can adjust the image size by increasing/decreasing the width, height */
-.custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #212529;
 }
 
-.custom-circle-image img {
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+/* Card Styling */
+.card-wrapper {
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  margin: 20px auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .card-title {
-  letter-spacing: 1.1px;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
-}
-
+/* Dropzone */
 .dropzone {
-  border-style: dashed;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f3f5 100%);
+  border: 2px dashed #6c757d;
+  padding: 40px;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
-
-.error {
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: blue;
-  text-align: center;
+.dropzone:hover {
+  background: linear-gradient(135deg, #f8f9fa, #dee2e6);
+  transform: scale(1.02);
 }
 
+/* Button */
+#submitBtn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #343a40, #495057);
+  border: none;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#submitBtn:hover {
+  background: linear-gradient(to right, #212529, #343a40);
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+#error {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 15px;
+}
+
+/* Table Styling */
 #classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-#classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#classTable th,
+#classTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
 }
 
 #classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
+  background: linear-gradient(to right, #212529, #343a40);
   color: white;
+  font-weight: 600;
+}
+
+#classTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* ResultHolder Image Card */
+#resultHolder .profile-card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  #submitBtn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
 }
